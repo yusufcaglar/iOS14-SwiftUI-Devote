@@ -64,25 +64,53 @@ struct ContentView: View {
     var body: some View {
         
         NavigationView {
-            
-            List {
-                ForEach(items) { item in
-                    Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                }
-                .onDelete(perform: deleteItems)
-            } //: List
+            VStack {
+                VStack(spacing: 16) {
+                    TextField("New Task", text: $task)
+                        .padding()
+                        .background(
+                            Color(UIColor.systemGray6)
+                        )
+                        .cornerRadius(10)
+                    
+                    Button(action: addItem, label: {
+                        Spacer()
+                        Text("Save")
+                        Spacer()
+                    })
+                    .disabled(isButtonDisabled)
+                    .padding()
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .background(isButtonDisabled ? Color.gray : Color.pink)
+                    .cornerRadius(10)
+                } //: VStack
+                .padding()
+                
+                List {
+                    ForEach(items) { item in
+                        VStack(alignment: .leading) {
+                            Text(item.task ?? "")
+                                .font(.headline)
+                                .fontWeight(.bold)
+                            
+                            
+                            Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+                                .font(.footnote)
+                                .foregroundColor(.gray)
+                        } //: List Item
+                    }
+                    .onDelete(perform: deleteItems)
+                } //: List
+                .listStyle(InsetGroupedListStyle())
+            } //: VStack
+            .navigationBarTitle("Daily Tasks", displayMode: .large)
             .toolbar {
                 #if os(iOS)
-                ToolbarItem(placement: .navigationBarLeading) {
+                ToolbarItem(placement: .navigationBarTrailing) {
                     EditButton()
                 }
                 #endif
-                
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
             } //: Toolbar
         } //: Navigation
     }
