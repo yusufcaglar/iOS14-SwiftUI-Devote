@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8824BDCB2619E8E60078409E /* NewTaskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8824BDCA2619E8E60078409E /* NewTaskItemView.swift */; };
+		8824BDCE2619F8870078409E /* BlankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8824BDCD2619F8870078409E /* BlankView.swift */; };
 		888792DE2617385700BDAFC9 /* DevoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888792DD2617385700BDAFC9 /* DevoteApp.swift */; };
 		888792E02617385700BDAFC9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888792DF2617385700BDAFC9 /* ContentView.swift */; };
 		888792E22617385700BDAFC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 888792E12617385700BDAFC9 /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8824BDCA2619E8E60078409E /* NewTaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskItemView.swift; sourceTree = "<group>"; };
+		8824BDCD2619F8870078409E /* BlankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankView.swift; sourceTree = "<group>"; };
 		888792DA2617385700BDAFC9 /* Devote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Devote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		888792DD2617385700BDAFC9 /* DevoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevoteApp.swift; sourceTree = "<group>"; };
 		888792DF2617385700BDAFC9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -105,6 +109,8 @@
 			children = (
 				888792DF2617385700BDAFC9 /* ContentView.swift */,
 				88E5E0FE2619E61C00EF7BAB /* BackgroundImageView.swift */,
+				8824BDCA2619E8E60078409E /* NewTaskItemView.swift */,
+				8824BDCD2619F8870078409E /* BlankView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -217,9 +223,11 @@
 				88E5E0FF2619E61C00EF7BAB /* BackgroundImageView.swift in Sources */,
 				888792E02617385700BDAFC9 /* ContentView.swift in Sources */,
 				888FB59E2618EFF700C4EA8A /* HideKeyboardExtension.swift in Sources */,
+				8824BDCE2619F8870078409E /* BlankView.swift in Sources */,
 				888FB59B2618E6F400C4EA8A /* Constant.swift in Sources */,
 				888792EA2617385700BDAFC9 /* Devote.xcdatamodeld in Sources */,
 				888792DE2617385700BDAFC9 /* DevoteApp.swift in Sources */,
+				8824BDCB2619E8E60078409E /* NewTaskItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
